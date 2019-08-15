@@ -13,6 +13,12 @@
 </head>
 
 <body>
+    <script src="/login/status"></script>
+    <script>
+        if (!isLogin) {
+            location.href = 'login.html'
+        }
+    </script>
     <script>
         NProgress.start()
     </script>
@@ -149,6 +155,7 @@
     <script>
         NProgress.done()
     </script>
+    <!-- 渲染用户列表模板 -->
     <script type="text/html" id='userTpl'>
         {{each data}}
         <tr>
@@ -169,15 +176,3 @@
 </body>
 
 </html>
-<tr>
-    <!-- <td class="text-center"><input type="checkbox"></td>
-  <td class="text-center"><img class="avatar" src="../assets/img/default.png"></td>
-  <td>coder@itcast.cn</td>
-  <td>coder</td>
-  <td>激活</td>
-  <td>普通用户</td>
-  <td class="text-center">
-      <a href="javascript:;" class="btn btn-default btn-xs">编辑</a>
-      <a href="javascript:;" class="btn btn-danger btn-xs">删除</a>
-  </td>
-</tr> -->
