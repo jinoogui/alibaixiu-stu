@@ -8,12 +8,6 @@
     <link rel="stylesheet" href="../assets/css/admin.css">
     <script src="../assets/vendors/jquery/jquery.min.js"></script>
 </head>
-<script src="/login/status"></script>
-<script>
-    if (!isLogin) {
-        location.href = 'login.html'
-    }
-</script>
 
 <body>
     <div class="login">
@@ -53,7 +47,7 @@
                     password: password
                 },
                 success: function(response) {
-                    location.href = './admin/index.html'
+                    location.href = './index.html'
 
                 },
                 error: function() {
