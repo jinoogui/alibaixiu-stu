@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../assets/vendors/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="../assets/vendors/nprogress/nprogress.css">
     <link rel="stylesheet" href="../assets/css/admin.css">
+    <script src="../assets/vendors/art-template/template-web.js"></script>
     <script src="../assets/vendors/nprogress/nprogress.js"></script>
 </head>
 
@@ -96,43 +97,8 @@
                                 <th class="text-center" width="100">操作</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td class="text-center"><input type="checkbox"></td>
-                                <td class="text-center"><img class="avatar" src="../assets/img/default.png"></td>
-                                <td>coder@itcast.cn</td>
-                                <td>coder</td>
-                                <td>激活</td>
-                                <td>普通用户</td>
-                                <td class="text-center">
-                                    <a href="javascript:;" class="btn btn-default btn-xs">编辑</a>
-                                    <a href="javascript:;" class="btn btn-danger btn-xs">删除</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center"><input type="checkbox"></td>
-                                <td class="text-center"><img class="avatar" src="../assets/img/default.png"></td>
-                                <td>coder@itcast.cn</td>
-                                <td>coder</td>
-                                <td>激活</td>
-                                <td>普通用户</td>
-                                <td class="text-center">
-                                    <a href="javascript:;" class="btn btn-default btn-xs">编辑</a>
-                                    <a href="javascript:;" class="btn btn-danger btn-xs">删除</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center"><input type="checkbox"></td>
-                                <td class="text-center"><img class="avatar" src="../assets/img/default.png"></td>
-                                <td>coder@itcast.cn</td>
-                                <td>coder</td>
-                                <td>激活</td>
-                                <td>普通用户</td>
-                                <td class="text-center">
-                                    <a href="javascript:;" class="btn btn-default btn-xs">编辑</a>
-                                    <a href="javascript:;" class="btn btn-danger btn-xs">删除</a>
-                                </td>
-                            </tr>
+                        <tbody id='tbodyTpl'>
+
                         </tbody>
                     </table>
                 </div>
@@ -183,7 +149,35 @@
     <script>
         NProgress.done()
     </script>
+    <script type="text/html" id='userTpl'>
+        {{each data}}
+        <tr>
+            <td class="text-center"><input type="checkbox"></td>
+            <td class="text-center"><img class="avatar" src="../assets/img/default.png"></td>
+            <td>{{$value.email}}</td>
+            <td>{{$value.nickName}}</td>
+            <td>{{$value.status}}</td>
+            <td>{{$value.role}}</td>
+            <td class="text-center">
+                <a href="javascript:;" class="btn btn-default btn-xs">编辑</a>
+                <a href="javascript:;" class="btn btn-danger btn-xs">删除</a>
+            </td>
+        </tr>
+        {{/each}}
+    </script>
 
 </body>
 
 </html>
+<tr>
+    <!-- <td class="text-center"><input type="checkbox"></td>
+  <td class="text-center"><img class="avatar" src="../assets/img/default.png"></td>
+  <td>coder@itcast.cn</td>
+  <td>coder</td>
+  <td>激活</td>
+  <td>普通用户</td>
+  <td class="text-center">
+      <a href="javascript:;" class="btn btn-default btn-xs">编辑</a>
+      <a href="javascript:;" class="btn btn-danger btn-xs">删除</a>
+  </td>
+</tr> -->
