@@ -48,7 +48,7 @@
                             <div class="form-group">
                                 <label class="form-image">
                   <input id="avatar" type="file">
-                  <input type="hidden" value='' id='avatarvalue'>
+                  <input type="hidden" value='' id='avatarvalue' name='avatar'>
                   <img src="../assets/img/default.png" id='headimg'>
                   <i class="mask fa fa-upload"></i>
                 </label>
@@ -178,7 +178,7 @@
         </tr>
         {{/each}}
     </script>
-    <script type=' text/html ' id='changeTpl '>
+    <script type='text/html' id='changeTpl '>
         <form id='changeusers' data-id='{{_id}}'>
             <h2>修改用户</h2>
             <div class="form-group">
