@@ -162,19 +162,23 @@
         <tr>
             <!-- src="../assets/img/default.png" -->
             <td class="text-center"><input type="checkbox"></td>
-            <td class="text-center"><img class="avatar" src='../assets/img/default.png'></td>
+            <td class="text-center">
+                {{if $value.avatar==null}}
+                <img class="avatar" src='../assets/img/default.png'> {{else}}
+                <img class="avatar" src='{{$value.avatar}}'> {{/if}}
+            </td>
             <td>{{$value.email}}</td>
             <td>{{$value.nickName}}</td>
             <td>{{$value.status}}</td>
             <td>{{$value.role}}</td>
             <td class="text-center">
                 <a href="javascript:;" class="btn btn-default btn-xs" id='change' data-id='{{$value._id}}'>编辑</a>
-                <a href="javascript:;" class="btn btn-danger btn-xs">删除</a>
+                <a href="javascript:;" class="btn btn-danger btn-xs delete" data-id='{{$value._id}}'>删除</a>
             </td>
         </tr>
         {{/each}}
     </script>
-    <script type='text/html' id='changeTpl'>
+    <script type=' text/html ' id='changeTpl '>
         <form id='changeusers' data-id='{{_id}}'>
             <h2>修改用户</h2>
             <div class="form-group">
@@ -182,10 +186,10 @@
                 <div class="form-group">
                     <label class="form-image">
           <input id="avatar" type="file">
-          <input type="hidden" value='' id='avatarvalue'>
-          <img id='headimg'  src='../assets/img/default.png''>
-          <i class="mask fa fa-upload"></i>
-        </label>
+          <input type="hidden" value=' ' id='avatarvalue '>
+          <img id='headimg '  src='../assets/img/default.png ''>
+                    <i class="mask fa fa-upload"></i>
+                    </label>
                 </div>
             </div>
             <div class="form-group">

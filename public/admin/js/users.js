@@ -28,7 +28,7 @@ $('#addusers').on('submit', function() {
         return false;
     })
     //头像上传功能
-$('#addusers').on('change', '#avatar', function() {
+$('#userlis').on('change', '#avatar', function() {
     var fromdata = new FormData();
     fromdata.append('avatar', this.files[0]);
     $.ajax({
@@ -43,6 +43,7 @@ $('#addusers').on('change', '#avatar', function() {
         }
     })
 });
+//用户编辑功能
 $('#tbodyTpl').on('click', '#change', function() {
     $.ajax({
         type: 'get',
@@ -66,4 +67,15 @@ $('#userlis').on('submit', '#changeusers', function() {
         }
     })
     return false;
+});
+//用户删除功能
+$('#tbodyTpl').on('click', '.delete', function() {
+    var id = $(this).data('id');
+    $.ajax({
+        url: '/users/' + id,
+        type: 'delete',
+        success: function() {
+            location.reload()
+        }
+    })
 })
