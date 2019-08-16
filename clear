@@ -1,0 +1,42 @@
+[33mcommit 810f049b64ba997ec4f33ab372d25a28933e3a66[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Merge: 692aa63 06764f5
+Author: jinno <1481650619@qq.com>
+Date:   Thu Aug 15 21:07:29 2019 +0800
+
+    Merge branch 'master' of https://github.com/jinoogui/alibaixiu-stu
+
+[33mcommit 692aa635c7132d6317b9241279caed2a6fab743a[m
+Author: jinno <1481650619@qq.com>
+Date:   Thu Aug 15 21:05:32 2019 +0800
+
+    部分后台登陆拦截已做 剩下的跟随进度增加
+
+[33mcommit 06764f51a3c2443cbc62b6bdab778575437070a5[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: jinoogui <53701959+jinoogui@users.noreply.github.com>
+Date:   Thu Aug 15 20:56:34 2019 +0800
+
+    Create README.md
+
+[33mcommit 8f93a8a7164c959a05c95b4a90c88a413b96ae59[m
+Author: jinno <1481650619@qq.com>
+Date:   Thu Aug 15 20:53:46 2019 +0800
+
+    用户列表渲染完成
+
+[33mcommit 42a6eecd249f2130892bcf1ee268950fec878583[m
+Author: jinno <1481650619@qq.com>
+Date:   Thu Aug 15 20:26:57 2019 +0800
+
+    添加用户功能完成 jinoo
+
+[33mcommit 96bc5ba934539dce4ac2211d26f25609fd57fb5e[m
+Author: jinno <1481650619@qq.com>
+Date:   Wed Aug 14 20:58:14 2019 +0800
+
+    登陆功能完成
+
+[33mcommit 7cce78cb4ae71883ed72500b38a8d234fdb55a5e[m
+Author: jinno <1481650619@qq.com>
+Date:   Wed Aug 14 20:00:48 2019 +0800
+
+    first commit

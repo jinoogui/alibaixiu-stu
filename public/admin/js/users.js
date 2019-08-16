@@ -27,3 +27,18 @@ $('#addusers').on('submit', function() {
     })
     return false;
 })
+$('#addusers').on('change', '#avatar', function() {
+    var fromdata = new FormData();
+    fromdata.append('avatar', this.files[0]);
+    $.ajax({
+        type: 'post',
+        url: '/upload',
+        data: fromdata,
+        contentType: false,
+        processData: false,
+        success: function(result) {
+            $('#avatarvalue').val(result[0].avatar);
+            $('#headimg').attr('src', result[0].avatar)
+        }
+    })
+});
