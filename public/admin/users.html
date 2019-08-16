@@ -178,7 +178,7 @@
         </tr>
         {{/each}}
     </script>
-    <script type='text/html' id='changeTpl '>
+    <script type='text/html' id='changeTpl'>
         <form id='changeusers' data-id='{{_id}}'>
             <h2>修改用户</h2>
             <div class="form-group">
@@ -186,8 +186,12 @@
                 <div class="form-group">
                     <label class="form-image">
           <input id="avatar" type="file">
-          <input type="hidden" value=' ' id='avatarvalue '>
-          <img id='headimg '  src='../assets/img/default.png ''>
+          <input type="hidden" value='' id='avatarvalue' name='avatar'>
+          {{if avatar}}
+          <img id='headimg'  src='{{avatar}}'>
+          {{else}}
+          <img id='headimg'  src='../assets/img/default.png'>
+          {{/if}}
                     <i class="mask fa fa-upload"></i>
                     </label>
                 </div>
